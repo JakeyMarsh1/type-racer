@@ -35,7 +35,34 @@
       <h1 class="type-racer-header">Type Racer</h1>
       <!-- Instructions Button -->
       <div class="mb-3">
-        <button class="btn btn-light instructions-btn">Instructions</button>
+        <button class="btn btn-light instructions-btn" data-bs-toggle="modal" data-bs-target="#instructionsModal">Instructions</button>
+      </div>
+
+      <!-- Instructions Modal -->
+      <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="instructionsModalLabel">Game Instructions</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Select a difficulty level from the dropdown.</li>
+                <li>Type the sentence shown in the prompt as quickly and accurately as possible.</li>
+                <li>Press <strong>Enter</strong> or click <strong>Start</strong> to begin the timer.</li>
+                <li>Press <strong>Enter</strong> or click <strong>Stop</strong> to stop the timer at any time.</li>
+                <li>When you complete a sentence, your words per minute (WPM) will be displayed and remain until you complete another sentence.</li>
+                <li>Your average WPM across all games is shown and saved in your browser.</li>
+                <li>The typing box will stay focused for easy access and accessibility.</li>
+                <li>Click <strong>Retry</strong> to reset and start over.</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -88,6 +115,7 @@
             <div>Level: <span id="result-level">Easy</span></div>
             <div>Time: <span id="result-time">0s</span></div>
             <div>WPM: <span id="result-wpm">0</span></div>
+            <div id="result-wpm-avg" style="margin-top:0.5rem;">Average WPM: 0</div>
           </div>
         </div>
       </div>
